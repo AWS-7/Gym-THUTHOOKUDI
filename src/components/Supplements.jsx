@@ -1,17 +1,28 @@
 import { Sparkles } from 'lucide-react';
+import image1 from '../images/image1.jpeg';
+import image2 from '../images/image2.jpeg';
+import image3 from '../images/image3.jpeg';
+import image4 from '../images/image4.jpeg';
+import images5 from '../images/images5.jpeg';
+import images6 from '../images/images6.jpeg';
+import images7 from '../images/images7.jpeg';
+import images8 from '../images/images8.jpeg';
+import images9 from '../images/images9.jpeg';
+import images10 from '../images/images10.jpeg';
+import images11 from '../images/images11.jpeg';
 
 const supplementImages = [
-  { src: '/src/images/image1.jpeg', alt: 'Supplement 1' },
-  { src: '/src/images/image2.jpeg', alt: 'Supplement 2' },
-  { src: '/src/images/image3.jpeg', alt: 'Supplement 3' },
-  { src: '/src/images/image4.jpeg', alt: 'Supplement 4' },
-  { src: '/src/images/images5.jpeg', alt: 'Supplement 5' },
-  { src: '/src/images/images6.jpeg', alt: 'Supplement 6' },
-  { src: '/src/images/images7.jpeg', alt: 'Supplement 7' },
-  { src: '/src/images/images8.jpeg', alt: 'Supplement 8' },
-  { src: '/src/images/images9.jpeg', alt: 'Supplement 9' },
-  { src: '/src/images/images10.jpeg', alt: 'Supplement 10' },
-  { src: '/src/images/images11.jpeg', alt: 'Supplement 11' },
+  { src: image1, alt: 'Supplement 1' },
+  { src: image2, alt: 'Supplement 2' },
+  { src: image3, alt: 'Supplement 3' },
+  { src: image4, alt: 'Supplement 4' },
+  { src: images5, alt: 'Supplement 5' },
+  { src: images6, alt: 'Supplement 6' },
+  { src: images7, alt: 'Supplement 7' },
+  { src: images8, alt: 'Supplement 8' },
+  { src: images9, alt: 'Supplement 9' },
+  { src: images10, alt: 'Supplement 10' },
+  { src: images11, alt: 'Supplement 11' },
 ];
 
 export default function Supplements() {
