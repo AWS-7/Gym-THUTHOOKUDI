@@ -321,7 +321,7 @@ const womenPlans = [
 const cardioMenPlans = [
   {
     name: '1 Month',
-    subtitle: 'Cardio Only (Men)',
+    subtitle: 'Student Plan',
     price: '1,299',
     period: 'month',
     tag: null,
@@ -336,7 +336,7 @@ const cardioMenPlans = [
   },
   {
     name: '3 Months',
-    subtitle: 'Cardio Only (Men)',
+    subtitle: 'Student Plan',
     price: '3,499',
     period: 'quarter',
     tag: 'POPULAR',
@@ -351,7 +351,7 @@ const cardioMenPlans = [
   },
   {
     name: '6 Months',
-    subtitle: 'Cardio Only (Men)',
+    subtitle: 'Student Plan',
     price: '5,999',
     period: '6 months',
     tag: 'BEST VALUE',
@@ -366,7 +366,7 @@ const cardioMenPlans = [
   },
   {
     name: '1 Year',
-    subtitle: 'Cardio Only (Men)',
+    subtitle: 'Student Plan',
     price: '8,999',
     period: 'year',
     tag: 'ULTIMATE',
@@ -538,7 +538,7 @@ export default function Plans() {
               }`}
             >
               <Zap size={14} />
-              Cardio (Men)
+              Without Cardio & Clg Student
             </button>
           </div>
         </div>
