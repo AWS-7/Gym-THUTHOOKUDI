@@ -1,22 +1,21 @@
 import { Sparkles } from 'lucide-react';
 
-const supplementBrands = [
-  { name: 'ON', fullName: 'Optimum Nutrition' },
-  { name: 'MuscleTech', fullName: 'MuscleTech' },
-  { name: 'Dymatize', fullName: 'Dymatize' },
-  { name: 'BSN', fullName: 'BSN' },
-  { name: 'Isopure', fullName: 'Isopure' },
-  { name: 'Cellucor', fullName: 'Cellucor C4' },
-  { name: 'BPI', fullName: 'BPI Sports' },
-  { name: 'GNC', fullName: 'GNC Pro' },
-  { name: 'MyProtein', fullName: 'MyProtein' },
-  { name: 'Universal', fullName: 'Universal Nutrition' },
-  { name: 'Nutrabay', fullName: 'Nutrabay' },
-  { name: 'AS-IT-IS', fullName: 'AS-IT-IS Nutrition' },
+const supplementImages = [
+  { src: '/src/images/image1.jpeg', alt: 'Supplement 1' },
+  { src: '/src/images/image2.jpeg', alt: 'Supplement 2' },
+  { src: '/src/images/image3.jpeg', alt: 'Supplement 3' },
+  { src: '/src/images/image4.jpeg', alt: 'Supplement 4' },
+  { src: '/src/images/images5.jpeg', alt: 'Supplement 5' },
+  { src: '/src/images/images6.jpeg', alt: 'Supplement 6' },
+  { src: '/src/images/images7.jpeg', alt: 'Supplement 7' },
+  { src: '/src/images/images8.jpeg', alt: 'Supplement 8' },
+  { src: '/src/images/images9.jpeg', alt: 'Supplement 9' },
+  { src: '/src/images/images10.jpeg', alt: 'Supplement 10' },
+  { src: '/src/images/images11.jpeg', alt: 'Supplement 11' },
 ];
 
 export default function Supplements() {
-  const doubledBrands = [...supplementBrands, ...supplementBrands];
+  const doubledImages = [...supplementImages, ...supplementImages];
 
   return (
     <section id="supplements" className="py-20 bg-[#080808]">
@@ -35,17 +34,19 @@ export default function Supplements() {
         </div>
       </div>
 
-      {/* Mobile Auto-Scrolling Brand Logos */}
+      {/* Mobile Auto-Scrolling Images */}
       <div className="relative overflow-hidden py-8 bg-[#0a0a0a] border-y border-white/5">
-        <div className="flex gap-12 animate-marquee-mobile whitespace-nowrap">
-          {doubledBrands.map((brand, i) => (
+        <div className="flex gap-6 animate-marquee-mobile whitespace-nowrap">
+          {doubledImages.map((image, i) => (
             <div
               key={i}
-              className="flex-shrink-0 inline-flex items-center justify-center px-6 py-3 bg-[#111] rounded-xl border border-white/10 hover:border-[#ff2020]/50 transition-all duration-300"
+              className="flex-shrink-0 inline-flex items-center justify-center p-2 bg-[#111] rounded-xl border border-white/10 hover:border-[#ff2020]/50 transition-all duration-300"
             >
-              <span className="font-display text-xl md:text-2xl font-bold text-white/90 tracking-wide">
-                {brand.name}
-              </span>
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-lg"
+              />
             </div>
           ))}
         </div>
@@ -53,14 +54,16 @@ export default function Supplements() {
 
       {/* Desktop Grid View */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 hidden md:grid md:grid-cols-4 lg:grid-cols-6 gap-4">
-        {supplementBrands.map((brand, i) => (
+        {supplementImages.map((image, i) => (
           <div
             key={i}
-            className="flex items-center justify-center p-6 bg-[#0a0a0a] rounded-xl border border-white/10 hover:border-[#ff2020]/50 hover:bg-[#111] transition-all duration-300 group"
+            className="flex items-center justify-center p-4 bg-[#0a0a0a] rounded-xl border border-white/10 hover:border-[#ff2020]/50 hover:bg-[#111] transition-all duration-300 group"
           >
-            <span className="font-display text-lg font-bold text-white/70 group-hover:text-[#ff2020] transition-colors text-center">
-              {brand.name}
-            </span>
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-28 object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
         ))}
       </div>
