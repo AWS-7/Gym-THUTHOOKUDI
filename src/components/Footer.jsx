@@ -133,19 +133,22 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-xs font-mono-custom tracking-wider uppercase">
-            © 2026 IRON EMPIRE CrossFit & Fitness Studio. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            <button 
-              onClick={scrollTop}
-              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 group"
-              style={{ background: 'rgba(255,32,32,0.1)', border: '1px solid rgba(255,32,32,0.3)' }}
-            >
-              <ArrowUp size={16} className="text-neon-red group-hover:text-white transition-colors" />
-            </button>
+        <div className="pt-8 border-t border-white/5 flex flex-col items-center gap-4">
+          <div className="text-center">
+            <p className="text-gray-600 text-xs font-mono-custom tracking-wider uppercase mb-2">
+              © 2026 IRON EMPIRE CrossFit & Fitness Studio. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-xs font-mono-custom tracking-wider">
+              Development By <span className="text-[#ff6b00]">AWS</span> - Agni Web Solution
+            </p>
           </div>
+          <button 
+            onClick={scrollTop}
+            className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 group"
+            style={{ background: 'rgba(255,32,32,0.1)', border: '1px solid rgba(255,32,32,0.3)' }}
+          >
+            <ArrowUp size={16} className="text-neon-red group-hover:text-white transition-colors" />
+          </button>
         </div>
       </div>
     </footer>
