@@ -13,6 +13,7 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Certifications from './components/Certifications';
 import DietGenerator from './components/DietGenerator';
+import Supplements from './components/Supplements';
 import BMICalculator from './components/BMICalculator';
 import FitnessCharts from './components/FitnessCharts';
 import Contact from './components/Contact';
@@ -60,9 +61,10 @@ function App() {
             <Hero />
             <Marquee />
             <About />
+            <Supplements />
+            <Transformations />
             <Classes />
             <Coaches />
-            <Transformations />
             <Gallery />
             <Plans />
             <Certifications />

@@ -318,3 +318,12 @@ select option {
   background: #1a1a1a;
   color: white;
 }
+
+@keyframes marquee-mobile {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-mobile {
+  animation: marquee-mobile 30s linear infinite;
+}
