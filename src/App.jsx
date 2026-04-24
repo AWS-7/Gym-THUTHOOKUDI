@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import About from './components/About';
 import Classes from './components/Classes';
-import Coaches from './components/Coaches';
 import Transformations from './components/Transformations';
 import Gallery from './components/Gallery';
 import Plans from './components/Plans';
@@ -64,7 +63,6 @@ function App() {
             <Supplements />
             <Transformations />
             <Classes />
-            <Coaches />
             <Gallery />
             <Plans />
             <Certifications />

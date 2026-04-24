@@ -38,9 +38,8 @@ const certs = [
 ];
 
 const achievements = [
-  { num: '500+', label: 'Successful Transformations' },
-  { num: '8+', label: 'Years of Excellence' },
-  { num: '15+', label: 'Certified Coaches' },
+  { num: '100+', label: 'Successful Transformations' },
+  { num: '3+', label: 'Years of Excellence' },
   { num: '50+', label: 'Programs Completed' },
   { num: '10+', label: 'Awards & Recognitions' },
   { num: '#1', label: 'CrossFit Box in Thoothukudi' },
@@ -110,7 +109,7 @@ export default function Certifications() {
               Numbers That <span className="gradient-text">Speak</span>
             </h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {achievements.map((a, i) => (
               <AchievementItem
                 key={i}
