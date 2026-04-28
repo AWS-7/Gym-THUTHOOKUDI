@@ -21,24 +21,38 @@ const galleryItems = [
     title: 'Muscle Definition',
     category: 'Results',
     image: 'gym_three.jpeg',
-    span: 'md:col-span-1 md:row-span-2',
+    span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 4,
+    title: 'Gym Equipment Area',
+    category: 'Training Area',
+    image: '/src/images/gympic.jpeg',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+  {
+    id: 5,
+    title: 'Workout Zone',
+    category: 'Training Area',
+    image: '/src/images/gympic2.jpeg',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+  {
+    id: 6,
     title: 'Functional Area',
     category: 'Training Area',
     image: 'https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=800',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
-    id: 5,
+    id: 7,
     title: 'Premium Equipment',
     category: 'Facilities',
     image: 'https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=800',
     span: 'md:col-span-2 md:row-span-1',
   },
   {
-    id: 6,
+    id: 8,
     title: 'Locker Rooms',
     category: 'Facilities',
     image: 'https://images.pexels.com/photos/3823063/pexels-photo-3823063.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -129,7 +143,7 @@ export default function Gallery() {
         {/* Desktop Grid */}
         <div
           ref={gridRef}
-          className="hidden md:grid grid-cols-4 grid-rows-3 gap-4 h-[800px]"
+          className="hidden md:grid grid-cols-4 auto-rows-[200px] gap-4"
         >
           {galleryItems.map((item, i) => (
             <GalleryCard 

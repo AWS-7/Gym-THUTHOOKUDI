@@ -4,7 +4,7 @@ import { useParallax } from '../hooks/useParallax';
 import { useCounter } from '../hooks/useScrollAnimation';
 
 const statsData = [
-  { value: '500+', label: 'Members' },
+  { value: '100+', label: 'Members' },
   { value: '3+', label: 'Years' },
   { value: '15+', label: 'Programs' },
   { value: '98%', label: 'Success Rate' },

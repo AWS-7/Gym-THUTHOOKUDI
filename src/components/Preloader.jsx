@@ -13,11 +13,11 @@ export default function Preloader({ onComplete }) {
           return 100;
         }
         // Increment faster if page is already loaded
-        const increment = document.readyState === 'complete' ? 5 : 1;
+        const increment = document.readyState === 'complete' ? 8 : 3;
         return Math.min(prev + increment, 100);
       });
     };
-    interval = window.setInterval(updateProgress, 30);
+    interval = window.setInterval(updateProgress, 20);
     const handleLoad = () => {
       // Force progress to 100 when everything is ready
       setProgress(100);
@@ -32,8 +32,8 @@ export default function Preloader({ onComplete }) {
     if (progress === 100) {
       const timeout = setTimeout(() => {
         setIsExiting(true);
-        setTimeout(onComplete, 800); // Wait for exit animation
-      }, 500);
+        setTimeout(onComplete, 400); // Wait for exit animation
+      }, 300);
       return () => clearTimeout(timeout);
     }
   }, [progress, onComplete]);

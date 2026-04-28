@@ -3,34 +3,41 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useParallax } from '../hooks/useParallax';
 
+import image1 from '../images/1777389260377.jpg';
+import image2 from '../images/1777389260383.jpg';
+import image3 from '../images/1777389260365.jpg';
+import image4 from '../images/1777389260359.jpg';
+import image5 from '../images/1777389260372.jpg';
+import image6 from '../images/1777389593560.jpg';
+
 const transformations = [
   {
-    name: 'Karthik R.',
+    name: 'Member Transformation',
     duration: '6 Months',
     lost: '18kg',
     goal: 'Fat Loss',
-    before: 'https://images.pexels.com/photos/4498155/pexels-photo-4498155.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=400',
+    before: image1,
+    after: image2,
     quote: 'IRON EMPIRE completely changed my life. The coaches push you beyond what you think is possible.',
     stars: 5,
   },
   {
-    name: 'Priya S.',
+    name: 'Member Transformation',
     duration: '4 Months',
     lost: '12kg',
     goal: 'Fat Loss + Tone',
-    before: 'https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=400',
+    before: image3,
+    after: image4,
     quote: 'Finally found a gym that actually cares about your results. The personal training here is world-class.',
     stars: 5,
   },
   {
-    name: 'Arun M.',
+    name: 'Member Transformation',
     duration: '8 Months',
     lost: '+8kg Muscle',
     goal: 'Muscle Gain',
-    before: 'https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg?auto=compress&cs=tinysrgb&w=400',
+    before: image5,
+    after: image6,
     quote: 'Gained 8kg of lean muscle in 8 months. The strength programs here are brutal — in the best way.',
     stars: 5,
   },

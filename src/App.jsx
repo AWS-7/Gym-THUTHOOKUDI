@@ -17,6 +17,7 @@ import BMICalculator from './components/BMICalculator';
 import FitnessCharts from './components/FitnessCharts';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SisterConcern from './components/SisterConcern';
 import Preloader from './components/Preloader';
 import SocialSection from './components/SocialSection';
 import PromotionPopup from './components/PromotionPopup';
@@ -31,30 +32,33 @@ function App() {
       <Preloader onComplete={() => setLoading(false)} />
       <PromotionPopup />
       
+      {/* SEO Content - Hidden from users but visible to search engines */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+        <h1>Best Gym in Thoothukudi - IRON EMPIRE CrossFit & Fitness Studio</h1>
+        <h2>CrossFit Tamil Nadu | Weight Loss Program | Muscle Gain | Strength Training Thoothukudi</h2>
+        <h3>Personal Training Tuticorin | HIIT Classes | Powerlifting | Nutrition Coaching</h3>
+        <p>
+          Looking for the best gym in Thoothukudi? IRON EMPIRE offers elite CrossFit training, 
+          personal coaching, and science-backed nutrition plans in Tuticorin. 
+          Join our fitness community for transformations, HIIT, powerlifting, and professional coaching. 
+          The most advanced fitness center near you in Thoothukudi, Tamil Nadu.
+        </p>
+        <ul>
+          <li>Best CrossFit Studio in Thoothukudi</li>
+          <li>Personal Training Tuticorin</li>
+          <li>Weight Loss Centers Tamil Nadu</li>
+          <li>Strength and Conditioning Experts</li>
+          <li>HIIT and Cardio Training Thoothukudi</li>
+          <li>Muscle Building Programs</li>
+          <li>Group Fitness Classes</li>
+          <li>Nutrition and Diet Planning</li>
+        </ul>
+      </div>
+
       {!loading && (
         <>
           <CustomCursor />
           <SoundControl />
-          
-          {/* Visually Hidden SEO Keywords Section (For Google Bots) */}
-          <div className="sr-only">
-            <h1>Best Gym in Thoothukudi - IRON EMPIRE CrossFit & Fitness Studio</h1>
-            <h2>CrossFit Tamil Nadu, Weight Loss Program, Muscle Gain, Strength Training Thoothukudi</h2>
-            <p>
-              Looking for the best gym in Thoothukudi? IRON EMPIRE offers elite CrossFit training, 
-              personal coaching, and science-backed nutrition plans in Tuticorin. 
-              Join our fitness community for transformations, HIIT, powerlifting, and professional coaching. 
-              The most advanced fitness center near you in Thoothukudi.
-            </p>
-            <ul>
-              <li>Best CrossFit Studio in Thoothukudi</li>
-              <li>Personal Training Tuticorin</li>
-              <li>Weight Loss Centers Tamil Nadu</li>
-              <li>Strength and Conditioning Experts</li>
-              <li>HIIT and Cardio Training Thoothukudi</li>
-            </ul>
-          </div>
-
           <Navbar />
           <div className="animate-in">
             <Hero />
@@ -73,6 +77,7 @@ function App() {
             <Testimonials />
              <FAQ />
             <Contact />
+            <SisterConcern />
             <Footer />
           </div>
         </>
