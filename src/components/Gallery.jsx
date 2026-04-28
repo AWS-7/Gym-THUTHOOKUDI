@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Maximize2, X } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import gympic from '../images/gympic.jpeg';
+import gympic2 from '../images/gympic2.jpeg';
 const galleryItems = [
   {
     id: 1,
@@ -27,14 +29,14 @@ const galleryItems = [
     id: 4,
     title: 'Gym Equipment Area',
     category: 'Training Area',
-    image: '/src/images/gympic.jpeg',
+    image: gympic,
     span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 5,
     title: 'Workout Zone',
     category: 'Training Area',
-    image: '/src/images/gympic2.jpeg',
+    image: gympic2,
     span: 'md:col-span-1 md:row-span-1',
   },
   {
