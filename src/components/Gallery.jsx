@@ -3,6 +3,8 @@ import { Maximize2, X } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import gympic from '../images/gympic.jpeg';
 import gympic2 from '../images/gympic2.jpeg';
+import galleryPic1 from '../images/1777468935763.jpg';
+import galleryPic2 from '../images/1777468935768.jpg';
 const galleryItems = [
   {
     id: 1,
@@ -40,24 +42,17 @@ const galleryItems = [
     span: 'md:col-span-1 md:row-span-1',
   },
   {
-    id: 6,
-    title: 'Functional Area',
+    id: 9,
+    title: 'Training Session',
     category: 'Training Area',
-    image: 'https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: galleryPic1,
     span: 'md:col-span-1 md:row-span-1',
   },
   {
-    id: 7,
-    title: 'Premium Equipment',
+    id: 10,
+    title: 'Workout Equipment',
     category: 'Facilities',
-    image: 'https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=800',
-    span: 'md:col-span-2 md:row-span-1',
-  },
-  {
-    id: 8,
-    title: 'Locker Rooms',
-    category: 'Facilities',
-    image: 'https://images.pexels.com/photos/3823063/pexels-photo-3823063.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: galleryPic2,
     span: 'md:col-span-1 md:row-span-1',
   },
 ];

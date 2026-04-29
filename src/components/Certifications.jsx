@@ -1,6 +1,7 @@
 import { Award, BadgeCheck, Trophy, Shield } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useScrollAnimation, useCounter } from '../hooks/useScrollAnimation';
+import certImage from '../images/1777468750879.jpg';
 
 function AchievementItem({ num, label, isVisible, delay }) {
   const { count, activate } = useCounter(num, 2500);
@@ -37,6 +38,10 @@ const certs = [
   { title: 'First Aid & CPR', icon: BadgeCheck, body: 'Red Cross Certified — All Coaches', color: '#d4a017' },
 ];
 
+const galleryCerts = [
+  { id: 1, src: certImage, title: 'Professional Certification', alt: 'IRON EMPIRE Professional Certificate' },
+];
+
 const achievements = [
   { num: '100+', label: 'Successful Transformations' },
   { num: '3+', label: 'Years of Excellence' },
@@ -49,6 +54,7 @@ export default function Certifications() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { ref: certsRef, isVisible: certsVisible } = useScrollAnimation();
   const { ref: achieveRef, isVisible: achieveVisible } = useScrollAnimation();
+  const [selectedCert, setSelectedCert] = useState(null);
 
   return (
     <section id="certifications" className="relative py-24 overflow-hidden">
@@ -99,6 +105,58 @@ export default function Certifications() {
             );
           })}
         </div>
+
+        {/* Certificate Gallery */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="font-display text-2xl text-white uppercase tracking-wider">
+              Our <span className="gradient-text-gold">Certificates</span>
+            </h3>
+            <p className="text-gray-400 text-sm mt-2">Click to view full size</p>
+          </div>
+          <div className="flex justify-center">
+            {galleryCerts.map((cert) => (
+              <div
+                key={cert.id}
+                onClick={() => setSelectedCert(cert)}
+                className="relative group cursor-pointer overflow-hidden rounded-lg border border-white/10 hover:border-[#ff6b00]/50 transition-all duration-300"
+                style={{ maxWidth: '400px' }}
+              >
+                <img
+                  src={cert.src}
+                  alt={cert.alt}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="font-display text-sm text-white">{cert.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Lightbox Modal */}
+        {selectedCert && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
+            onClick={() => setSelectedCert(null)}
+          >
+            <div className="relative max-w-4xl max-h-[90vh]">
+              <img
+                src={selectedCert.src}
+                alt={selectedCert.alt}
+                className="max-w-full max-h-[85vh] object-contain rounded-lg"
+              />
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="absolute -top-10 right-0 text-white hover:text-[#ff6b00] transition-colors"
+              >
+                ✕ Close
+              </button>
+            </div>
+          </div>
+        )}
 
         <div
           ref={achieveRef}
