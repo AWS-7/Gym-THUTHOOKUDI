@@ -59,9 +59,9 @@ export default function Contact() {
                 {
                   icon: MapPin,
                   title: 'Find Us',
-                  lines: ['IRON EMPIRE CrossFit & Fitness Studio', 'Thoothukudi (Tuticorin)', 'Tamil Nadu — 628 001, India'],
+                  lines: ['IRON EMPIRE CrossFit & Fitness Studio', 'VVD Main Road, Thoothukudi', 'Tamil Nadu — 628 001'],
                   color: '#ff2020',
-                  link: null,
+                  link: 'https://www.google.com/maps/place/Iron+Empire+CrossFit+%26+Fitness+Studio/@8.8251477,78.1474925,17z',
                 },
                 {
                   icon: Phone,
@@ -242,12 +242,12 @@ export default function Contact() {
                       <p className="font-mono-custom text-[10px] text-gray-400 mt-0.5">Thoothukudi, Tamil Nadu</p>
                     </div>
                     <a
-                      href="https://maps.google.com/?q=Thoothukudi,Tamil+Nadu"
+                      href="https://www.google.com/maps/place/Iron+Empire+CrossFit+%26+Fitness+Studio/@8.8251477,78.1474925,17z"
                       target="_blank"
                       rel="noreferrer"
                       className="flex items-center gap-1 font-mono-custom text-[10px] tracking-wider text-[#ff6b00] hover:text-white transition-colors uppercase border border-[#ff6b00]/50 px-2 py-1 rounded hover:bg-[#ff6b00]/20"
                     >
-                      <span>Maps</span>
+                      <span>Open in Maps</span>
                       <ExternalLink size={10} />
                     </a>
                   </div>
