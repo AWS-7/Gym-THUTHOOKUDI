@@ -66,7 +66,7 @@ function App() {
             <About />
             <Supplements />
             <Transformations />
-            <Classes />
+            <Classes />  
             <Gallery />
             <Plans />
             <Certifications />
