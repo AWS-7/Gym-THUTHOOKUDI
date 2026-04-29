@@ -4,33 +4,46 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const testimonials = [
   {
-    name: 'Manoj Kumar',
+    name: 'Mugesh',
     role: 'CrossFit Athlete',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+    avatar: 'M',
+    color: '#ff6b00',
     quote: 'IRON EMPIRE is hands down the best gym in Thoothukudi. The community here is incredible, and the coaches really know their stuff. My strength has doubled in just 4 months!',
     stars: 5,
     tag: 'STRENGTH'
   },
   {
-    name: 'Santhiya R.',
+    name: 'Suganya',
     role: 'Fitness Enthusiast',
-    image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400',
+    avatar: 'S',
+    color: '#d4a017',
     quote: 'The transformation programs here are legit. I lost 12kg and gained so much confidence. The diet plan they gave me was easy to follow and very effective.',
     stars: 5,
     tag: 'WEIGHT LOSS'
   },
   {
-    name: 'Vignesh W.',
+    name: 'Ramesh',
     role: 'Powerlifter',
-    image: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=400',
+    avatar: 'R',
+    color: '#ff2020',
     quote: 'If you are serious about lifting, this is the place. The equipment is top-notch and the atmosphere is pure fire. Every session here feels like a personal best.',
     stars: 5,
     tag: 'POWER'
   },
   {
-    name: 'Anjali D.',
-    role: 'Yoga & HIIT',
-    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400',
+    name: 'Bala',
+    role: 'Body Builder',
+    avatar: 'B',
+    color: '#ff6b00',
+    quote: 'The personal training here transformed my physique completely. The trainers push you to limits you never knew you had. Best investment for my health!',
+    stars: 5,
+    tag: 'MUSCLE'
+  },
+  {
+    name: 'Siva',
+    role: 'HIIT Specialist',
+    avatar: 'S',
+    color: '#d4a017',
     quote: 'I love the variety of classes. From intense HIIT to focused strength sessions, there is something for everyone. The energy in the gym is just contagious!',
     stars: 5,
     tag: 'HIIT'
@@ -104,8 +117,16 @@ export default function Testimonials() {
               {testimonials.map((t, i) => (
                 <div key={i} className="min-w-full flex flex-col md:flex-row items-center gap-8 md:gap-12">
                   <div className="relative shrink-0">
-                    <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-neon-red/30 p-1">
-                      <img src={t.image} alt={t.name} className="w-full h-full object-cover rounded-xl" />
+                    <div 
+                      className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-neon-red/30 flex items-center justify-center"
+                      style={{ background: `linear-gradient(135deg, ${t.color}20, ${t.color}40)` }}
+                    >
+                      <span 
+                        className="font-display text-4xl md:text-6xl font-bold"
+                        style={{ color: t.color }}
+                      >
+                        {t.avatar}
+                      </span>
                     </div>
                     <div className="absolute -bottom-4 -right-4 glass px-3 py-1 rounded border border-white/10">
                       <span className="font-mono-custom text-[10px] text-gold tracking-widest">{t.tag}</span>

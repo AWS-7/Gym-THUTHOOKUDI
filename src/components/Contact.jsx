@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, MessageCircle, Mail, Send, CheckCircle, Instagram } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Mail, Send, CheckCircle, Instagram, ExternalLink } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Contact() {
@@ -132,33 +132,125 @@ export default function Contact() {
                 );
               })}
             </div>
-            <div className="glass clip-angled p-4 relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center opacity-30">
-                  <MapPin size={48} className="mx-auto text-neon-red mb-2" />
-                  <p className="font-display text-lg uppercase tracking-wider text-white">Thoothukudi, Tamil Nadu</p>
+            {/* 3D Map Model */}
+            <div className="glass clip-angled p-1 relative overflow-hidden group">
+              {/* 3D Map Container */}
+              <div className="relative h-56 rounded overflow-hidden" style={{ perspective: '1000px' }}>
+                {/* Animated Map Background */}
+                <div 
+                  className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                  }}
+                >
+                  {/* Grid Lines */}
+                  <div 
+                    className="absolute inset-0 opacity-20"
+                    style={{
+                      backgroundImage: `
+                        linear-gradient(rgba(255,107,0,0.3) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,107,0,0.3) 1px, transparent 1px)
+                      `,
+                      backgroundSize: '40px 40px',
+                      transform: 'rotateX(60deg) translateY(-20px)',
+                      transformOrigin: 'center top',
+                    }}
+                  />
+                  
+                  {/* 3D Building Models */}
+                  <div className="absolute inset-0 flex items-end justify-center pb-8">
+                    {/* Building 1 */}
+                    <div 
+                      className="mx-1 transition-all duration-500 hover:scale-110"
+                      style={{
+                        width: '30px',
+                        height: '60px',
+                        background: 'linear-gradient(180deg, #ff6b00 0%, #d4a017 100%)',
+                        transform: 'rotateX(-20deg) translateZ(20px)',
+                        boxShadow: '0 10px 30px rgba(255,107,0,0.4)',
+                      }}
+                    />
+                    {/* Building 2 - Main Gym */}
+                    <div 
+                      className="mx-1 relative"
+                      style={{
+                        width: '50px',
+                        height: '90px',
+                        background: 'linear-gradient(180deg, #ff2020 0%, #ff6b00 100%)',
+                        transform: 'rotateX(-20deg) translateZ(40px)',
+                        boxShadow: '0 15px 40px rgba(255,32,32,0.5)',
+                      }}
+                    >
+                      {/* Roof Glow */}
+                      <div 
+                        className="absolute -top-2 left-1/2 -translate-x-1/2 w-12 h-3 rounded-full animate-pulse"
+                        style={{ background: 'rgba(255,107,0,0.8)', filter: 'blur(8px)' }}
+                      />
+                    </div>
+                    {/* Building 3 */}
+                    <div 
+                      className="mx-1"
+                      style={{
+                        width: '25px',
+                        height: '50px',
+                        background: 'linear-gradient(180deg, #d4a017 0%, #ff6b00 100%)',
+                        transform: 'rotateX(-20deg) translateZ(15px)',
+                        boxShadow: '0 8px 25px rgba(212,160,23,0.4)',
+                      }}
+                    />
+                  </div>
+                  
+                  {/* Road Lines */}
+                  <div 
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-20"
+                    style={{
+                      background: 'linear-gradient(0deg, rgba(255,255,255,0.05) 0%, transparent 100%)',
+                      transform: 'rotateX(60deg)',
+                      transformOrigin: 'bottom center',
+                    }}
+                  />
                 </div>
-              </div>
-              <div
-                className="h-48 rounded relative"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(255,32,32,0.05) 0%, rgba(212,160,23,0.05) 100%)',
-                  border: '1px solid rgba(255,255,255,0.05)',
-                }}
-              >
-                <div className="absolute inset-0 bg-grid opacity-50" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                  <div className="w-6 h-6 rounded-full bg-neon-red animate-pulse-glow mb-3" />
-                  <p className="font-display text-sm text-white uppercase tracking-wider">IRON EMPIRE</p>
-                  <p className="font-mono-custom text-[10px] text-gray-500 mt-1">Thoothukudi, Tamil Nadu</p>
-                  <a
-                    href="https://maps.google.com/?q=Thoothukudi,Tamil+Nadu"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-3 font-mono-custom text-[10px] tracking-widest text-electric-orange hover:text-neon-red transition-colors uppercase border border-electric-orange/40 px-3 py-1 rounded hover:border-neon-red/60"
-                  >
-                    Open Maps →
-                  </a>
+                
+                {/* Map Pin Overlay */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="relative">
+                    {/* Pulsing Rings */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full border border-[#ff6b00]/30 animate-ping" />
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-14 h-14 rounded-full border border-[#ff6b00]/50 animate-ping" style={{ animationDelay: '0.5s' }} />
+                    </div>
+                    {/* Main Pin */}
+                    <div 
+                      className="w-12 h-12 rounded-full flex items-center justify-center animate-bounce"
+                      style={{ 
+                        background: 'linear-gradient(135deg, #ff6b00, #d4a017)',
+                        boxShadow: '0 0 30px rgba(255,107,0,0.6)',
+                      }}
+                    >
+                      <MapPin size={24} className="text-white" />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Info Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-display text-sm text-white uppercase tracking-wider">IRON EMPIRE</p>
+                      <p className="font-mono-custom text-[10px] text-gray-400 mt-0.5">Thoothukudi, Tamil Nadu</p>
+                    </div>
+                    <a
+                      href="https://maps.google.com/?q=Thoothukudi,Tamil+Nadu"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1 font-mono-custom text-[10px] tracking-wider text-[#ff6b00] hover:text-white transition-colors uppercase border border-[#ff6b00]/50 px-2 py-1 rounded hover:bg-[#ff6b00]/20"
+                    >
+                      <span>Maps</span>
+                      <ExternalLink size={10} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

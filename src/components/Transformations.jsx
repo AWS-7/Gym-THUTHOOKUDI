@@ -9,6 +9,10 @@ import image3 from '../images/1777389260365.jpg';
 import image4 from '../images/1777389260359.jpg';
 import image5 from '../images/1777389260372.jpg';
 import image6 from '../images/1777389593560.jpg';
+import image7 from '../images/1777426267016.jpg';
+import image8 from '../images/1777426267040.jpg';
+import image9 from '../images/1777427306598.jpg';
+import image10 from '../images/1777427306604.jpg';
 
 const transformations = [
   {
@@ -42,22 +46,22 @@ const transformations = [
     stars: 5,
   },
   {
-    name: 'Divya K.',
+    name: 'Member Transformation',
     duration: '5 Months',
     lost: '15kg',
     goal: 'Weight Loss',
-    before: 'https://images.pexels.com/photos/5384538/pexels-photo-5384538.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/868483/pexels-photo-868483.jpeg?auto=compress&cs=tinysrgb&w=400',
+    before: image7,
+    after: image8,
     quote: "Never thought I'd be this confident. The team at IRON EMPIRE made it happen!",
     stars: 5,
   },
   {
-    name: 'Suresh T.',
+    name: 'Member Transformation',
     duration: '12 Months',
     lost: '25kg',
     goal: 'Total Transformation',
-    before: 'https://images.pexels.com/photos/4498296/pexels-photo-4498296.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=400',
+    before: image9,
+    after: image10,
     quote: '25kg gone in a year. The CrossFit programs and diet coaching together are absolutely lethal.',
     stars: 5,
   },
