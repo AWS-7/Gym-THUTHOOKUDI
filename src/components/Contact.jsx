@@ -87,9 +87,9 @@ export default function Contact() {
                 {
                   icon: Mail,
                   title: 'Email',
-                  lines: ['info@ironempire.com', 'coaching@ironempire.com'],
+                  lines: ['Nandhinisundar71@gmail.com', 'info@ironempire.com'],
                   color: '#d4a017',
-                  link: 'mailto:info@ironempire.com',
+                  link: 'mailto:Nandhinisundar71@gmail.com',
                 },
               ].map((info, i) => {
                 const Icon = info.icon;

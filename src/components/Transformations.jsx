@@ -16,7 +16,7 @@ import image10 from '../images/1777427306604.jpg';
 
 const transformations = [
   {
-    name: 'Member Transformation',
+    name: 'Esrome    ',
     duration: '6 Months',
     lost: '18kg',
     goal: 'Fat Loss',
@@ -26,7 +26,7 @@ const transformations = [
     stars: 5,
   },
   {
-    name: 'Member Transformation',
+    name: 'Senthilkumar',
     duration: '4 Months',
     lost: '12kg',
     goal: 'Fat Loss + Tone',
@@ -36,7 +36,7 @@ const transformations = [
     stars: 5,
   },
   {
-    name: 'Member Transformation',
+    name: 'Vinish',
     duration: '8 Months',
     lost: '+8kg Muscle',
     goal: 'Muscle Gain',
@@ -46,7 +46,7 @@ const transformations = [
     stars: 5,
   },
   {
-    name: 'Member Transformation',
+    name: 'Vignesh ',
     duration: '5 Months',
     lost: '15kg',
     goal: 'Weight Loss',
@@ -56,7 +56,7 @@ const transformations = [
     stars: 5,
   },
   {
-    name: 'Member Transformation',
+    name: 'Mohan',
     duration: '12 Months',
     lost: '25kg',
     goal: 'Total Transformation',
